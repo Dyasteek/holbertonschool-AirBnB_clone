@@ -8,7 +8,7 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = '(hbnb)'
 
-    def do_emptyline(self, *args):
+    def emptyline(self):
         """Does nothing when it receibes an empty line"""
         pass
 
