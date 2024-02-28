@@ -11,15 +11,15 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
     def emptyline(self):
-        """Does nothing when it recieves an empty line."""
+        """Empty line or spaces do nothing."""
         pass
 
     def do_quit(self, *args):
-        """Quit command to exit the program."""
+        """Command to exit."""
         return True
 
     def do_EOF(self, *args):
-        """EOF command to exit the program."""
+        """Another command that exit the program."""
         return True
     
     def do_help(self, *args):
@@ -27,8 +27,7 @@ class HBNBCommand(cmd.Cmd):
         print("Quit command to exit the program")
 
     def do_create(self, *args):
-        """Creates a new instance of an object.
-        Usage: create class_name"""
+        """Creates a new instance of an object"""
         arg = args[0].split()
         if len(arg) == 0:
             print("** class name missing **")
@@ -44,8 +43,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, *args):
-        """Prints the string representation of an instance.
-        Usage: show class_name id"""
+        """Prints the string representation of an instance"""
         arg = args[0].split()
         if len(arg) == 0:
             print("** class name missing **")
