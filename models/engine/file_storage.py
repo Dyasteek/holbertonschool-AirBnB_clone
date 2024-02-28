@@ -40,7 +40,7 @@ class FileStorage:
                 obj_dict = json.load(json_file)
                 for key in obj_dict:
                     cls = obj_dict[key].get("__class__")
-                    new_obj = eval(cls+"()")
+                    new_obj = exec(cls+"()")
                     self.new(new_obj)
         except:
             pass
