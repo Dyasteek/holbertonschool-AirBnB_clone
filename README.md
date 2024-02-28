@@ -24,7 +24,7 @@
    Then you can use the command:
 
    ```
-   $ git clone https://github.com/Dyasteek/AirBnB_clone.git
+   $ git clone https://github.com/Dyasteek/holbertonschool-AirBnB_clone.git
    ```
 
    And with that you have you own copy of the program.
