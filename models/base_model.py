@@ -10,10 +10,10 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Initializates the BaseModel instance"""
-        if len(kwargs) is not 0:
+        if len(kwargs) != 0:
             for key in kwargs:
-                if key is not "__class__":
-                    if key is "updated_at" or key is "created_at":
+                if key != "__class__":
+                    if key == "updated_at" or key == "created_at":
                         setattr(self, key, datetime.
                                 strptime(kwargs[key], "%Y-%m-%d %H:%M:%S.%f"))
                     else:
